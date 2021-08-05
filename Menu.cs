@@ -17,7 +17,8 @@ namespace interface_QLCHVB
             Console.WriteLine("| 4. Lọc Đối Tượng Bạc              |");
             Console.WriteLine("| 5. Hiện Tất Cả Đối Tượng          |");
             Console.WriteLine("| 6. Sắp Xếp Các Đối Tượng          |");
-            Console.WriteLine("| 7. Cập Nhật Đối Tượng             |");
+            Console.WriteLine("| 7. Lọc Hãng PNJ                   |");
+            Console.WriteLine("| 8. Cập Nhật Đối Tượng             |");
             Console.WriteLine("| 0. Thoát Chương Trình             |");
             Console.WriteLine("=====================================");
             Console.WriteLine("Chọn chức năng theo số");
@@ -34,8 +35,8 @@ namespace interface_QLCHVB
             {
                 case 1:
                     {
-            Console.WriteLine("| 6. Nhập Tuổi Vàng                 |");
-            Console.WriteLine("| 7. Nhập Loại Vàng                 |");
+            Console.WriteLine("| 6. Nhập Loại Vàng                 |");
+            Console.WriteLine("| 7. Nhập Tuổi Vàng                 |");
                         break;
                     }
                 case 2:

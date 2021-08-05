@@ -60,7 +60,6 @@ namespace interface_QLCHVB
         {
             Console.Clear();
             Console.WriteLine("            --Nhập Bạc--            ");
-            //Console.WriteLine("| 1. Tạo Đối Tượng Vàng             |");
             Console.Title = "Nhập Thông Tin | " + Program.getName();
             Menu.MenuNhapTTSanPham(i);
             int iChucNang = int.Parse(Console.ReadLine());
@@ -103,7 +102,7 @@ namespace interface_QLCHVB
                         }
                     case 5:
                         {
-                            Console.WriteLine("Tuổi Vàng    : ");
+                            Console.WriteLine("Số Lượng    : ");
                             setSoLuong(int.Parse(Console.ReadLine()));
                             NhapTTSanPham(arrVangBac, i);
                             break;
@@ -126,8 +125,73 @@ namespace interface_QLCHVB
         public override void XuatTTSanPham()
         {
             base.XuatTTSanPham();
-            Console.WriteLine("Loại Bạc    : ");
-            Console.WriteLine("Kiểu Bạc    : ");
+            Console.WriteLine("Loại Bạc     : ");
+            Console.WriteLine("Kiểu Bạc     : ");
+        }
+        public void CapNhatThongTin(ArrayList arrVangBac, int i)
+        {
+            Console.WriteLine("            --Nhập Bạc--            ");
+            Console.Title = "Nhập Thông Tin | " + Program.getName();
+            Menu.MenuNhapTTSanPham(i);
+            int iChucNang = int.Parse(Console.ReadLine());
+            do
+            {
+                switch (iChucNang)
+                {
+                    case 0: // Về Menu Chính
+                        {
+                            Program.Programming(arrVangBac);
+                            break;
+                        }
+                    case 1:
+                        {
+                            Console.WriteLine("Mã Sản Phẩm  : ");
+                            setMaSP(Console.ReadLine());
+                            NhapTTSanPham(arrVangBac, i);
+                            break;
+                        }
+                    case 2:
+                        {
+                            Console.WriteLine("Tên Sản Phẩm : ");
+                            setTenSP(Console.ReadLine());
+                            NhapTTSanPham(arrVangBac, i);
+                            break;
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine("Hãng Sản Xuất: ");
+                            setHangSX(Console.ReadLine());
+                            NhapTTSanPham(arrVangBac, i);
+                            break;
+                        }
+                    case 4:
+                        {
+                            Console.WriteLine("Đơn Giá      : ");
+                            setDonGia(double.Parse(Console.ReadLine()));
+                            NhapTTSanPham(arrVangBac, i);
+                            break;
+                        }
+                    case 5:
+                        {
+                            Console.WriteLine("Số Lượng    : ");
+                            setSoLuong(int.Parse(Console.ReadLine()));
+                            NhapTTSanPham(arrVangBac, i);
+                            break;
+                        }
+                    case 6:
+                        {
+                            Console.WriteLine("Loại Bạc     : ");
+                            LoaiBac = Console.ReadLine();
+                            break;
+                        }
+                    case 7:
+                        {
+                            Console.WriteLine("Kiểu Bạc     : ");
+                            KieuBac = int.Parse(Console.ReadLine());
+                            break;
+                        }
+                }
+            } while (true);
         }
     }
     

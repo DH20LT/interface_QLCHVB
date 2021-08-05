@@ -93,6 +93,8 @@ namespace interface_QLCHVB
                                     vang = (exVang)arrVangBac[i];
                                     vang.XuatTTSanPham();
                                 }
+                                else
+                                    Console.WriteLine("Không Tìm Thấy!");
                             }
                             Console.ReadLine();
                             Program.Programming(arrVangBac);
@@ -100,6 +102,7 @@ namespace interface_QLCHVB
                         }
                     case 8: //Cập Nhật Đối Tượng
                         {
+                            ChucNang.UpdateObject(arrVangBac);
                             break;
                         }
                 }
