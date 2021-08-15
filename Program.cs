@@ -105,6 +105,9 @@ namespace interface_QLCHVB
                             ChucNang.UpdateObject(arrVangBac);
                             break;
                         }
+                    default:
+                        Console.WriteLine("Không có chức năng này!");
+                        break;
                 }
             } while (true);
         }
@@ -115,6 +118,7 @@ namespace interface_QLCHVB
             Console.Title = "Quản Lý Cửa Hàng Vàng Bạc";
             ArrayList arrVangBac = new ArrayList();
             Programming(arrVangBac);
+            Console.ReadKey();
         }
     }
 }
