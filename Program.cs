@@ -55,23 +55,30 @@ namespace interface_QLCHVB
                         {
                             int So = arrVangBac.Count;
                             VangBac[] arrTam = (VangBac[])arrVangBac.ToArray(typeof(VangBac));
+
                             for (int i = 0; i < So; i++)
                             {
-                                for (int j = i + 1; j < So; j++)
+                                for (int j = i + 1; j < So; j++) // vấn đề là j phải <
                                 {
                                     if (arrTam[i].getDonGia() > arrTam[j].getDonGia())
                                     {
-                                        // Nếu arr[i] > arr[j] thì hoán đổi giá trị của arr[i] và arr[j]
+                            // Nếu arr[i] > arr[j] thì hoán đổi giá trị của arr[i] và arr[j]
                                         VangBac temp = arrTam[i];
                                         arrTam[i] = arrTam[j];
                                         arrTam[j] = temp;
                                     }
                                 }
                             }
-                            for (int i = 0; i < So; i++)
+                            Console.WriteLine(So);
+                            //arrTam[0].XuatTTSanPham();
+                            //arrTam[1].XuatTTSanPham();
+                            //arrTam[1].XuatTTSanPham();
+                            Console.ReadKey();
+                            for (int k = 0; k <= arrTam.Length; k++)
                             {
-                                arrTam[i].XuatTTSanPham();
+                                arrTam[k].XuatTTSanPham();
                             }
+                            Console.ReadLine();
                             break;
                         }
                     case 7: //Hãng Sản Xuất PNJ
@@ -105,6 +112,9 @@ namespace interface_QLCHVB
                             ChucNang.UpdateObject(arrVangBac);
                             break;
                         }
+                    default:
+                        Console.WriteLine("Không có chức năng này!");
+                        break;
                 }
             } while (true);
         }
@@ -115,6 +125,7 @@ namespace interface_QLCHVB
             Console.Title = "Quản Lý Cửa Hàng Vàng Bạc";
             ArrayList arrVangBac = new ArrayList();
             Programming(arrVangBac);
+            Console.ReadKey();
         }
     }
 }
